@@ -1,6 +1,6 @@
-package dev.uraxys.taskable.test.tasks;
+package dev.uraxys.taskable.tasks;
 
-import dev.uraxys.taskable.test.task.ExecutingTask;
+import dev.uraxys.taskable.task.ExecutingTask;
 
 public class PrintTask extends ExecutingTask {
 

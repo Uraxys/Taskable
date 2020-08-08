@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.uraxys</groupId>
-    <artifactId>Taskable</artifactId>
-    <version>1.0</version>
+    <artifactId>taskable</artifactId>
+    <version>1.1</version>
     <build>
         <plugins>
             <plugin>
@@ -39,6 +39,14 @@
         </dependency>
 
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Uraxys Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/uraxys/taskable</url>
+        </repository>
+    </distributionManagement>
 
 
 </project>

@@ -1,4 +1,4 @@
-package dev.uraxys.taskable.test.task;
+package dev.uraxys.taskable.task;
 
 public abstract class ExecutingTask extends GenericTask {
 

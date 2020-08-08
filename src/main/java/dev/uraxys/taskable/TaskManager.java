@@ -1,6 +1,6 @@
-package dev.uraxys.taskable.test;
+package dev.uraxys.taskable;
 
-import dev.uraxys.taskable.test.task.ITask;
+import dev.uraxys.taskable.task.ITask;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +8,8 @@ import java.util.List;
 
 @SuppressWarnings("unused")
 public class TaskManager {
+
+	public static PrintMethod PRINT_METHOD = System.out::println;
 
 	// Important task
 	private ITask currentImportantTask;

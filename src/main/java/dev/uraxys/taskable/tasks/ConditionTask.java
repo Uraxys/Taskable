@@ -1,7 +1,7 @@
-package dev.uraxys.taskable.test.tasks;
+package dev.uraxys.taskable.tasks;
 
-import dev.uraxys.taskable.test.TaskCondition;
-import dev.uraxys.taskable.test.task.TickingTask;
+import dev.uraxys.taskable.task.TickingTask;
+import dev.uraxys.taskable.TaskCondition;
 
 @SuppressWarnings("unused")
 public class ConditionTask extends TickingTask {

@@ -1,6 +1,6 @@
-package dev.uraxys.taskable.test;
+package dev.uraxys.taskable;
 
-import dev.uraxys.taskable.test.task.ITask;
+import dev.uraxys.taskable.task.ITask;
 
 public interface TaskEvent {
 

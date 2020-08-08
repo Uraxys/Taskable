@@ -1,4 +1,4 @@
-package dev.uraxys.taskable.test;
+package dev.uraxys.taskable;
 
 public interface TaskCondition {
 

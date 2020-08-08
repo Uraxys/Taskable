@@ -1,9 +1,9 @@
-package dev.uraxys.taskable.test;
+package dev.uraxys.taskable;
 
-import dev.uraxys.taskable.test.tasks.CountTask;
-import dev.uraxys.taskable.test.tasks.DelayTask;
-import dev.uraxys.taskable.test.tasks.MathTask;
-import dev.uraxys.taskable.test.tasks.PrintTask;
+import dev.uraxys.taskable.tasks.CountTask;
+import dev.uraxys.taskable.tasks.DelayTask;
+import dev.uraxys.taskable.tasks.MathTask;
+import dev.uraxys.taskable.tasks.PrintTask;
 import org.junit.jupiter.api.Test;
 
 public class Main {

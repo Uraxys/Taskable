@@ -1,6 +1,6 @@
-package dev.uraxys.taskable.test.tasks;
+package dev.uraxys.taskable.tasks;
 
-import dev.uraxys.taskable.test.task.TickingTask;
+import dev.uraxys.taskable.task.TickingTask;
 
 public class CountTask extends TickingTask {
 
