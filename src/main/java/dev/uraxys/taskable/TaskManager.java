@@ -1,5 +1,6 @@
 package dev.uraxys.taskable;
 
+import dev.uraxys.taskable.task.ExecutingTask;
 import dev.uraxys.taskable.task.ITask;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class TaskManager {
 
 	// Tasks
 	private final List<ITask> tasks = new ArrayList<>();
+	private final List<ExecutingTask> globalTasks = new ArrayList<>();
 
 	// Basic event system.
 	private TaskEvent onTaskInit = null;
@@ -40,6 +42,16 @@ public class TaskManager {
 	 * Tick the TaskManager, this is required to use all of the tasks.
 	 */
 	public void tick() {
+		// Run global tasks if there isn't a important task currently running.
+		if (this.currentImportantTask == null) {
+			// No important tasks are running, then run the global tasks.
+			for (ExecutingTask task:this.globalTasks) {
+				task.init();
+				task.executeTask();
+			}
+		}
+
+		// If there isn't any other tasks then do nothing.
 		if (this.tasks.isEmpty()) return;
 
 		// Check if we have a important task.
@@ -192,6 +204,34 @@ public class TaskManager {
 	 */
 	public void addTasks(ITask... tasks) {
 		this.tasks.addAll(Arrays.asList(tasks));
+	}
+
+
+
+	/*
+	 * Handle the global ITask list.
+	 */
+
+
+
+	/**
+	 * Add a ExecutingTask to the global task list.
+	 *
+	 * @param   task
+	 *          The ExecutingTask to add.
+	 */
+	public void addGlobalTask(ExecutingTask task) {
+		this.globalTasks.add(task);
+	}
+
+	/**
+	 * Add one or more ExecutingTask to the global task list.
+	 *
+	 * @param   tasks
+	 *          The ExecutingTask as an array.
+	 */
+	public void addGlobalTasks(ExecutingTask... tasks) {
+		this.globalTasks.addAll(Arrays.asList(tasks));
 	}
 
 }
